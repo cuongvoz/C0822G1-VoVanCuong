@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p style="color: crimson; font-size: 20px"><strong> Bài 1 : Tính Điểm Trung Bình</strong></p>
+<table>
+    <th style="font-size: 20px" colspan="2"> Nhập Điểm</th>
+    <tr>
+        <th> Vật lí</th>
+        <td><input type="number" id="vatli"></td>
+    </tr>
+    <tr>
+        <th> Hóa Học</th>
+        <td><input type="number" id="hoahoc"></td>
+    </tr>
+    <tr>
+        <th>Sinh Học</th>
+        <td><input type="number" id="sinhhoc"></td>
+    </tr>
+</table>
+<br>
+<button onclick="diemTrungBinh()">KẾT QUẢ</button>
+<br>
+<p id="ketqua"></p>
+<hr>
+
+</body>
+<script>
+    function diemTrungBinh() {
+        cuongphysics = document.getElementById("vatli").value
+        cuongchemistry = document.getElementById("hoahoc").value
+        cuongbiology = document.getElementById("sinhhoc").value
+        let physics = parseInt(cuongphysics);
+        let chemistry = parseInt(cuongchemistry);
+        let biology = parseInt(cuongbiology);
+        let area = (physics + chemistry + biology) / 3;
+        document.getElementById("ketqua").innerHTML = "Điểm Trung Bình là " + area
+    }
+
+</script>
+</html>
