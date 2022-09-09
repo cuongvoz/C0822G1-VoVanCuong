@@ -13,18 +13,22 @@
     </tr>
     <tr> <td></td></tr>
     <tr>
-        <td><input type="number" id="amount"></td>
+        <td><input type="text" id="amount"></td>
     </tr>
 </table> <br>
-<button onclick="sonhietdo()">KẾT QUẢ</button> <br>
-<p id="ketquanhietdo"></p>
+<button onclick="chuyenNhietDo()">KẾT QUẢ</button> <br>
+<p style="font-size: 25px; color: palevioletred " id="ketquanhietdo"></p>
 <hr>
 <script>
-    function sonhietdo() {
+    function chuyenNhietDo() {
         soNhiet = document.getElementById("amount").value;
         let nhietDoF = parseInt(soNhiet);
         let sonhietla = 9/5 * nhietDoF + 32
-        document.getElementById("ketquanhietdo").innerHTML = "Số Nhiệt Độ F Của Bạn Là : " + sonhietla
+        if(isNaN(soNhiet)) {
+        document.getElementById("ketquanhietdo").innerHTML = "Hãy Nhập Số Vào Ô Trống Bên Trên !"
+        } else {
+            document.getElementById("ketquanhietdo").innerHTML = "Số Độ F Của Bạn Là : " + sonhietla
+        }
     }
 </script>
 </body>

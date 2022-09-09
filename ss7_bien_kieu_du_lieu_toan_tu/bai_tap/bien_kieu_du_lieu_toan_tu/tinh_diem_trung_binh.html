@@ -30,14 +30,14 @@
 </body>
 <script>
     function diemTrungBinh() {
-        cuongphysics = document.getElementById("vatli").value
-        cuongchemistry = document.getElementById("hoahoc").value
-        cuongbiology = document.getElementById("sinhhoc").value
-        let physics = parseInt(cuongphysics);
-        let chemistry = parseInt(cuongchemistry);
-        let biology = parseInt(cuongbiology);
-        let area = (physics + chemistry + biology) / 3;
-        document.getElementById("ketqua").innerHTML = "Điểm Trung Bình là " + area
+        let scorePhysics = document.getElementById("vatli").value;
+        let scoreChemistry = document.getElementById("hoahoc").value;
+        let scoreBiology = document.getElementById("sinhhoc").value;
+        let physics = parseInt(scorePhysics);
+        let chemistry = parseInt(scoreChemistry);
+        let biology = parseInt(scoreBiology);
+        let mediumScore = (physics + chemistry + biology) / 3;
+        document.getElementById("ketqua").innerHTML = "Điểm Trung Bình là " + mediumScore;
     }
 
 </script>

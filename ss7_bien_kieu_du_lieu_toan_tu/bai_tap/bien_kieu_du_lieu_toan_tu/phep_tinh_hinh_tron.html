@@ -25,14 +25,14 @@
 </body>
 <script>
     function tinhDienTich() {
-        soDienTich = document.getElementById("amount").value;
+        let soDienTich = document.getElementById("amount").value;
         let tongDienTich = (soDienTich * soDienTich) * 3.14;
-        document.getElementById("ketquadientich").innerHTML = "Diện Tích Hình Tròn Là : " + tongDienTich
+        document.getElementById("ketquadientich").innerHTML = "Diện Tích Hình Tròn Là : " + tongDienTich;
     }
     function tinhChuVi() {
-       soChuVi = document.getElementById("amount").value;
+       let soChuVi = document.getElementById("amount").value;
        let tongChuVi = (soChuVi * 2) * 3.14;
-       document.getElementById("ketquachuvi").innerHTML = "Chu Vi Hình Tròn là : " + tongChuVi
+       document.getElementById("ketquachuvi").innerHTML = "Chu Vi Hình Tròn là : " + tongChuVi;
     }
 </script>
 </html>

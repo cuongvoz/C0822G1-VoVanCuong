@@ -7,45 +7,45 @@
 <body>
 <h2>Caculator</h2>
 <input type="number" id="dauvao1"> <input type="number" id="dauvao2"> <br> <br>
-<button onclick="add()"> Addition(+)</button>
-<button onclick="sub()"> Subtraction(-)</button>
-<button onclick="mul()"> Multiplication(x)</button>
-<button onclick="div()"> Division(/)</button>
+<button onclick="addition()"> Addition(+)</button>
+<button onclick="subtraction()"> Subtraction(-)</button>
+<button onclick="multiplication()"> Multiplication(x)</button>
+<button onclick="division()"> Division(/)</button>
 <br> <br>
 <p id="result"></p>
 </body>
 <script>
-    function add() {
-        let giaTri1 = document.getElementById('dauvao1').value
-        let giaTri2 = document.getElementById('dauvao2').value
-        let cong = parseInt(giaTri1) + parseInt(giaTri2)
+    function addition() {
+        let giaTri1 = document.getElementById('dauvao1').value;
+        let giaTri2 = document.getElementById('dauvao2').value;
+        let cong = parseInt(giaTri1) + parseInt(giaTri2);
 
-        document.getElementById('result').innerHTML = "Tổng bằng : " + cong
+        document.getElementById('result').innerHTML = "Tổng bằng : " + cong;
 
     }
 
-    function sub() {
-        let giaTri1 = document.getElementById('dauvao1').value
-        let giaTri2 = document.getElementById('dauvao2').value
-        let tru = parseInt(giaTri1) - parseInt(giaTri2)
+    function subtraction() {
+        let giaTri1 = document.getElementById('dauvao1').value;
+        let giaTri2 = document.getElementById('dauvao2').value;
+        let tru = parseInt(giaTri1) - parseInt(giaTri2);
 
-        document.getElementById('result').innerHTML = "Tổng bằng : " + tru
+        document.getElementById('result').innerHTML = "Tổng bằng : " + tru;
     }
 
-    function mul() {
-        let giaTri1 = document.getElementById('dauvao1').value
-        let giaTri2 = document.getElementById('dauvao2').value
-        let nhan = parseInt(giaTri1) * parseInt(giaTri2)
+    function multiplication() {
+        let giaTri1 = document.getElementById('dauvao1').value;
+        let giaTri2 = document.getElementById('dauvao2').value;
+        let nhan = parseInt(giaTri1) * parseInt(giaTri2);
 
-        document.getElementById('result').innerHTML = "Tổng bằng : " + nhan
+        document.getElementById('result').innerHTML = "Tổng bằng : " + nhan;
     }
 
-    function div() {
-        let giaTri1 = document.getElementById('dauvao1').value
-        let giaTri2 = document.getElementById('dauvao2').value
-        let chia = parseInt(giaTri1) / parseInt(giaTri2)
+    function division() {
+        let giaTri1 = document.getElementById('dauvao1').value;
+        let giaTri2 = document.getElementById('dauvao2').value;
+        let chia = parseInt(giaTri1) / parseInt(giaTri2);
 
-        document.getElementById('result').innerHTML = "Tổng bằng : " + chia
+        document.getElementById('result').innerHTML = "Tổng bằng : " + chia;
     }
 </script>
 </html>
