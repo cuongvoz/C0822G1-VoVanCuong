@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <script>
+     let diemGiuaKi = +prompt("Nhập Điểm Giữa Kì Của Bạn");
+     let diemCuoiKi = +prompt("Nhập Điểm Cuối Kì Của Bạn");
+     let hocLuc = (diemCuoiKi + diemGiuaKi) / 2;
+     if (hocLuc >= 8) {
+         alert("Bạn Học Lực Giỏi");
+     } else if (hocLuc < 8 && hocLuc >= 6.5) {
+         alert("Bạn Học Lực Khá");
+     } else if (hocLuc < 6.5 && hocLuc >= 5.0) {
+         alert("Bạn Học Lực Trung Bình");
+     } else {
+         alert("Bạn Học Yếu");
+     }
+ </script>
+</body>
+</html>
