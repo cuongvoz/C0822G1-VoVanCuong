@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body onload="doReady()">
+<img id="minion" alt="chú cường vlog" src="https://znews-photo.zingcdn.me/Uploaded/mdf_drkydd/2016_12_18/ezgifcomcrop_1.gif" style="position: absolute; left: 0;top: 0">
+</body>
+<script>
+    function nutDiLen() {
+        let element = document.getElementById("minion");
+        element.style.top = parseInt(element.style.top) - 5 + 'px';
+    }
+
+    function nutDiXuong() {
+        var element = document.getElementById("minion");
+        element.style.top = parseInt(element.style.top) + 5 + 'px';
+    }
+
+    function nutSangTrai() {
+        var element = document.getElementById("minion");
+        element.style.left = parseInt(element.style.left) - 5 + 'px';
+    }
+
+    function nutSangPhai() {
+        var element = document.getElementById("minion");
+        element.style.left = parseInt(element.style.left) + 5 + 'px';
+    }
+
+    function nutDiChuyen(evt) {
+        switch (evt.keyCode) {
+            case 40:
+                nutDiXuong();
+                break;
+            case 37:
+                nutSangTrai();
+                break;
+            case 39:
+                nutSangPhai();
+                break;
+            case 38:
+                nutDiChuyen();
+                break;
+        }
+    }
+    function doReady() {
+        window.addEventListener('keydown', nutDiChuyen);
+    }
+
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p style="font-size: 30px;"> <b>Bài Tính Chỉ Số BMI </b></p>
+<p style="font-size: 20px;"><b> Nhập Chiều Cao (M)</b></p>
+<input type="number" id="chieucao"> <br>
+<p style="font-size: 20px;"><b> Nhập Cân Nặng (Kg)</b></p>
+<input type="number" id="cannang"> <br> <br>
+<button onclick="chiSoBmi()">Kết Quả</button>
+<p id="ketqua" style="font-size: 20px ;color: black"><b></b></p>
+</body>
+<script>
+    function chiSoBmi() {
+        let height = document.getElementById("chieucao").value;
+        let weight = document.getElementById("cannang").value;
+        let bmi = weight / (height * height);
+        if (height == "") {
+            document.getElementById("ketqua").innerHTML = "Bạn Vui Lòng Nhập CHỉ Số Vào Ô Chiều Cao";
+        } else if (weight == "") {
+            document.getElementById("ketqua").innerHTML = "Bạn Vui Lòng Nhập Chỉ Số Vào Ô Cân Nặng";
+        } else if (bmi < 18.5) {
+            document.getElementById("ketqua").innerHTML = "Chỉ Số BMI Của Bạn Là : " + bmi + " Bạn Gầy Quá";
+        } else if (bmi >= 18.5 && bmi < 25.0) {
+            document.getElementById("ketqua").innerHTML = "Chỉ Số BMI Của Bạn Là : " + bmi + " Cơ Thể Của Bạn Bình Thường";
+        } else if (bmi >= 25.0 && bmi < 30.0) {
+            document.getElementById("ketqua").innerHTML = "Chỉ Số BMI Của Bạn Là : " + bmi + " Bạn Ăn Ít Thôi! Béo Lắm Rồi";
+        } else if (bmi >= 30.0) {
+            document.getElementById("ketqua").innerHTML = "Chỉ Số BMI Của Bạn Là : " + bmi + " Bạn Trông Như Con Heo Rồi";
+        } else {
+            document.getElementById("ketqua").innerHTML = "Chỉ Số BMI của Bạn Không Tồn Tại, Bạn Không Phải Con Người";
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table tr:nth-child(1){
+            background-color:skyblue;
+        }
+
+    </style>
+</head>
+<body>
+
+ <p><b>Bài Máy Tính Đơn Giản</b></p>
+<fieldset style="width: 100px">
+<table>
+     <tr>
+         <td colspan="4"> <input style="width: 100px" type="text" id="amount"></td>
+     </tr>
+     <tr>
+         <th> <button style="width: auto" onclick="so1()" value="1">1</button></th>
+         <th> <button onclick="so2()" value="2">2</button></th>
+         <th> <button onclick="so3()" value="3">3</button></th>
+         <th> <button style="width: auto" onclick="cong()" value="+">+</button></th>
+     </tr>
+     <tr>
+         <th> <button onclick="so4()" value="4">4</button></th>
+         <th> <button onclick="so5()" value="5">5</button></th>
+         <th> <button onclick="so6()" value="6">6</button></th>
+         <th> <button style="width: 23px" onclick="tru()" value="-">-</button></th>
+     </tr>
+     <tr>
+         <th> <button style="width: 23px" onclick="so7()" value="7">7</button></th>
+         <th> <button onclick="so8()" value="8">8</button></th>
+         <th> <button onclick="so9()" value="9">9</button></th>
+         <th> <button style="width: 23px" onclick="nhan()" value="x">x</button></th>
+     </tr>
+     <tr><th> <button style="width: 23px" onclick="chuC()" value="C">C</button></th>
+         <th> <button onclick="so0()" value="0">0</button></th>
+         <th> <button onclick="bang()" value="=">=</button></th>
+         <th> <button style="width: 23px" onclick="chia()" value="/">/</button></th></tr>
+ </table>
+</fieldset>
+<script>
+    function so1() {
+      let result = document.getElementById("amount").value;
+      document.getElementById("amount").value = result + "1";
+    }
+    function so2() {
+        let result = document.getElementById("amount").value;
+        document.getElementById("amount").value = result + "2";
+    }
+    function so3() {
+        let result = document.getElementById("amount").value;
+        document.getElementById("amount").value = result + "3";
+    }
+    function cong() {
+        let result = document.getElementById("amount").value;
+        document.getElementById("amount").value = result + "+";
+    }
+    function so4() {
+        let result = document.getElementById("amount").value;
+        document.getElementById("amount").value = result + "4";
+    }
+    function so5() {
+        let result = document.getElementById("amount").value;
+        document.getElementById("amount").value = result + "5";
+    }function so6() {
+        let result = document.getElementById("amount").value;
+        document.getElementById("amount").value = result + "6";
+    }function tru() {
+        let result = document.getElementById("amount").value;
+        document.getElementById("amount").value = result + "-";
+    }function so7() {
+        let result = document.getElementById("amount").value;
+        document.getElementById("amount").value = result + "7";
+    }function so8() {
+        let result = document.getElementById("amount").value;
+        document.getElementById("amount").value = result + "8";
+    }function so9() {
+        let result = document.getElementById("amount").value;
+        document.getElementById("amount").value = result + "9";
+    }
+    function nhan() {
+        let result = document.getElementById("amount").value;
+        document.getElementById("amount").value = result + "*";
+    }
+    function chuC() {
+        let result = document.getElementById("amount").value;
+        document.getElementById("amount").value = result.slice(0,-1);
+    }
+    function so0() {
+        let result = document.getElementById("amount").value;
+        document.getElementById("amount").value = result + "0";
+    }
+    function bang() {
+        let result = document.getElementById("amount").value;
+        document.getElementById("amount").value = eval(result)
+    }
+    function chia() {
+        let result = document.getElementById("amount").value;
+        document.getElementById("amount").value =  result + "/";
+    }
+</script>
+</body>
+</html>

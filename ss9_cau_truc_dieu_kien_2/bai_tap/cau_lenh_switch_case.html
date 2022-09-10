@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p style="font-size: 25px"> <b> Bài Tính Số Ngày Của Tháng <b> </p>
+<input type="text" id="thang"> <button onclick="tinhSoNgay()">Tính Số Ngày</button>
+<p style="font-size: 20px" id="result"></p>
+<script>
+    function tinhSoNgay() {
+        let thang = document.getElementById("thang").value;
+        let month = parseInt(thang);
+        switch (month) {
+            case 1:
+                document.getElementById("result").innerHTML = "Tháng 1 có 31 Ngày";
+                break;
+            case 2:
+                document.getElementById("result").innerHTML = "Tháng 2 có 28 hoặc 29 Ngày";
+                break;
+            case 3:
+                document.getElementById("result").innerHTML = "Tháng 3 có 31 Ngày";
+                break;
+            case 4:
+                document.getElementById("result").innerHTML = "Tháng 4 có 30 Ngày";
+                break;
+            case 5:
+                document.getElementById("result").innerHTML = "Tháng 5 có 31 Ngày";
+                break;
+            case 6:
+                document.getElementById("result").innerHTML = "Tháng 6 có 30 Ngày";
+                break;
+            case 7:
+                document.getElementById("result").innerHTML = "Tháng 7 có 31 Ngày";
+                break;
+            case 8:
+                document.getElementById("result").innerHTML = "Tháng 8 có 31 Ngày";
+                break;
+            case 9:
+                document.getElementById("result").innerHTML = "Tháng 9 có 30 Ngày";
+                break;
+            case 10:
+                document.getElementById("result").innerHTML = "Tháng 3 có 31 Ngày";
+                break;
+            case 11:
+                document.getElementById("result").innerHTML = "Tháng 3 có 30 Ngày";
+                break;
+            case 12:
+                document.getElementById("result").innerHTML = "Tháng 3 có 31 Ngày";
+                break;
+            default:
+                document.getElementById("result").innerHTML = "Số Tháng Không Hợp Lệ, Vui Lòng Nhập Lại";
+        }
+    }
+</script>
+</body>
+</html>
