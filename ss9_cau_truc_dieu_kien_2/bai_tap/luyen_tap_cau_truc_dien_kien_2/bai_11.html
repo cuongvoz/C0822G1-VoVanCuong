@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let salary = +prompt("Nhập Số Lương Tháng Của Bạn");
+    if (salary > 0 && salary < 5000000) {
+        alert("Thuế TNCN Của Bạn Là : " + salary * 0.05 + " VND");
+    } else if (salary >= 5000000 && salary < 10000000) {
+        alert("Thuế TNCN Của Bạn Là : " + salary * 0.1 + " VND");
+    } else if (salary >= 10000000 && salary < 18000000) {
+        alert("Thuế TNCN Của Bạn Là : " + salary * 0.15 + " VND");
+    } else if (salary >= 18000000 && salary < 32000000) {
+        alert("Thuế TNCN Của Bạn Là : " + salary * 0.2 + " VND");
+    } else if (salary >= 32000000 && salary < 52000000) {
+        alert("Thuế TNCN Của Bạn Là : " + salary * 0.25 + " VND");
+    } else if (salary >= 52000000 && salary < 80000000) {
+        alert("Thuế TNCN Của Bạn Là : " + salary * 0.3 + " VND");
+    } else if (salary >= 80000000) {
+        alert("Thuế TNCN Của Bạn Là : " + salary * 0.35 + " VND");
+    } else {
+        alert("Số Bạn Nhập Không Hợp Lệ");
+    }
+</script>
+</body>
+</html>

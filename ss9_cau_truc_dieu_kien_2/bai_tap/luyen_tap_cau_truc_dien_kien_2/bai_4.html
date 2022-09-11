@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <p><b> Tính Diện Tích Hình Chữ Nhật</b></p>
+ <p><b> &emsp;&emsp; Nhập Chiều Rộng &emsp;  &emsp; Nhập Chiều Cao </b></p>
+<input type="number" id="heigt">
+ <input type="number" id="weight"> <br> <br>
+<button type="button" onclick="tinhDienTich()" >KẾT QUẢ</button>
+<p id="result" style="font: revert"></b></p>
+</body>
+<script>
+    function tinhDienTich() {
+        let height = document.getElementById("heigt").value;
+        let weight = document.getElementById("weight").value;
+        let area = height * weight
+        document.getElementById("result").innerHTML = "Diện Tích Hình Chữ Nhật Là : " + area
+    }
+</script>
+</html>

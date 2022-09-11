@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Số Nguyên Bất Kì Cho Cạnh a");
+    let b = +prompt("Số Nguyên Bất Kì Cho Cạnh b");
+    let c = +prompt("Số Nguyên Bất Kì Cho Cạnh c");
+    let canh1 = a + b;
+    let canh2 = b + c;
+    let canh3 = c + a;
+    if (a > 0 && b > 0 && c > 0) {
+        if (canh1 > c && canh2 > a && canh3 > b) {
+            alert("Các Số Nguyên Đủ Điều Kiện Là Cạnh Của Một Hình Tam Giác ");
+        } else if (canh1 < c) {
+            alert("Cạnh a + b Không Lớn Hơn Cạnh c Nên Không Đủ Điều Kiện");
+        } else if (canh2 < a) {
+            alert("Cạnh b + c Không Lớn Hơn Cạnh a Nên Không Đủ Điều Kiện");
+        } else {
+            alert("Cạnh c + a Không Lớn Hơn Cạnh b Nên Không Đủ Điều Kiện");
+        }
+    } else {
+        alert("Các Số Nguyên Bạn Nhập Không Đủ Điều Kiện Lớn Hơn 0")
+    }
+</script>
+</body>
+</html>

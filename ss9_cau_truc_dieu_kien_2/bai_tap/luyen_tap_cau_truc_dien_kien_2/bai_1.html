@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> <b> Hãy Nhập Độ °C Vào Ô Bên Dưới </b> </p>
+<input type="number" id="doc">
+<button type="button" onclick="doiNhietDo()"> Kết Quả </button> <br>
+<p id="result" style="font-size: large"></p>
+</body>
+<script>
+    function doiNhietDo() {
+        let celcius = document.getElementById("doc").value;
+        let fahrenheit = celcius * 9/5 + 32;
+        document.getElementById("result").innerHTML = "Số Nhiệt Độ °F là : " + fahrenheit;
+    }
+</script>
+</html>

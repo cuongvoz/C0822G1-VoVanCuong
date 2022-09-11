@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soW = +prompt("Nhập Số W Mà Gia Đình Bạn Tiêu Thụ Một Ngày");
+    let soKwh = (soW / 1000) * 24;
+    if (soKwh > 0 && soKwh < 50) {
+        alert("Gia Đình Bạn Tiêu Thụ Điện Ở Bậc 1 Số Tiền Bạn Phải Trả Cho Một Tháng là : " + soKwh * 1678 * 30 + " VND");
+    } else if (soKwh >= 51 && soKwh <= 100) {
+        alert("Gia Đình Bạn Tiêu Thụ Điện Ở Bậc 2 Số Tiền Bạn Phải Trả Cho Một Tháng là : " + soKwh * 1734 * 30 + " VND");
+    } else if (soKwh >= 101 && soKwh <= 200) {
+        alert("Gia Đình Bạn Tiêu Thụ Điện Ở Bậc 3 Số Tiền Bạn Phải Trả Cho Một Tháng là : " + soKwh * 2014 * 30 + " VND");
+    } else if (soKwh >= 201 && soKwh <= 300) {
+        alert("Gia Đình Bạn Tiêu Thụ Điện Ở Bậc 4 Số Tiền Bạn Phải Trả Cho Một Tháng là : " + soKwh * 2536 * 30 + " VND");
+    } else if (soKwh >= 301 && soKwh <= 400) {
+        alert("Gia Đình Bạn Tiêu Thụ Điện Ở Bậc 5 Số Tiền Bạn Phải Trả Cho Một Tháng là : " + soKwh * 2834 * 30 + " VND");
+    } else if (soKwh > 400) {
+        alert("Gia Đình Bạn Tiêu Thụ Điện Ở Bậc 6 Số Tiền Bạn Phải Trả Cho Một Tháng là : " + soKwh * 2927 * 30 + " VND");
+    } else {
+        alert("Số W Bạn Nhập Không Hợp Lệ");
+    };
+</script>
+</body>
+</html>

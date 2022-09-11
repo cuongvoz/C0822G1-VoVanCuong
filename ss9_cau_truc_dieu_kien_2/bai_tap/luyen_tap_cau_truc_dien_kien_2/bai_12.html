@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <script>
+     let soTienVay = +prompt("Nhập Số Tiền Muốn Vay");
+     let soThang = +prompt("Nhập Số Tháng Cho Vay");
+     let soTienGoc = soTienVay / soThang;
+     let phanTram = soThang / 100;
+     let soTienLai = (soTienVay * phanTram) / soThang;
+     alert("Số Tiền Gốc Bạn Phải Trả Là " + soTienGoc + " VNĐ"
+     + " Và Số Tiền Lãi Bạn Phải Đóng Mỗi Tháng Là " + soTienLai + " VNĐ");
+     alert("Số Tiền Gốc Của Bạn Tháng Thứ 2 Còn Lại " + (soTienVay - soTienGoc) + "Vnd" +
+         " Và Số Tiền Lãi Là " + (soTienVay - soTienGoc) * phanTram / soThang + " VND");
+ </script>
+</body>
+</html>

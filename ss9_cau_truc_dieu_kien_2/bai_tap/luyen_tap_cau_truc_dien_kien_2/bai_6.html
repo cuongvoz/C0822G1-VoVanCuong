@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <script>
+     let a = +prompt("Nhập Giá Trị a");
+     let b = +prompt("Nhập Giá Trị b");
+     if (a === 0 && b === 0) {
+         alert("Phương Trình Có Vô Số Nghiệm");
+     } else if (a < 0 || a > 0) {
+         alert("Phương Trình Có Nghiệm Duy Nhất là X = " + -b / a);
+     } else if (a === 0 && b < 0 || b > 0) {
+         alert("Phương Trình Vô Nghiệm");
+     }
+ </script>
+</body>
+</html>

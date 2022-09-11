@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> <b> Hãy Nhập Số Mét Vào Ô Bên Dưới </b> </p>
+<input type="number" id="met">
+<button type="button" onclick="doiSangFeet()"> Kết Quả </button> <br>
+<p id="result" style="font-size: large"></p>
+</body>
+<script>
+    function doiSangFeet() {
+        let met = document.getElementById("met").value;
+        let feet = met * 3.2808;
+        document.getElementById("result").innerHTML = "Số Feet Của Bạn Là : " + feet + " Feet";
+    }
+</script>
+</html>

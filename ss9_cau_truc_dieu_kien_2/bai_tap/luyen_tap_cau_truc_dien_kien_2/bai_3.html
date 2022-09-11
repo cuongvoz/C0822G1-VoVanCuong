@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> <b> Nhập Chiều Dài Một Cạnh Bất Kì Của Hình Vuông </b> </p>
+<input type="number" id="edge">
+<button type="button" onclick="tinhDienTich()"> Kết Quả </button> <br>
+<p id="result" style="font-size: large"></p>
+</body>
+<script>
+    function tinhDienTich() {
+        let edge = document.getElementById("edge").value;
+        let area = edge * edge;
+        document.getElementById("result").innerHTML = "Diện Tích Hình Vuông Là : " + area ;
+    }
+</script>
+</html>
