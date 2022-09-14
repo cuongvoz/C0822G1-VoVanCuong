@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soTienVay = +prompt("Nhập Số Tiền Muốn Vay");
+    let soThang = +prompt("Nhập Số Tháng Cho Vay");
+    let soTienGoc = soTienVay / soThang;
+    let phanTram = soThang / 100;
+    let soTienLai = (soTienVay * phanTram) / soThang;
+    let i = 1;
+    do {
+        document.write("Số Tiền Gốc Bạn Phải Trả Tháng " + i + " Là " + soTienGoc + "VND Và Số Tiền Lãi Là " + soTienLai + "VND" + "<br>")
+        i++;
+    } while (i <= soThang);
+</script>
+</body>
+</html>
