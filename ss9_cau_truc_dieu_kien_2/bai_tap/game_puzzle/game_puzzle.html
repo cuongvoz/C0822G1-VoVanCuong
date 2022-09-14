@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <img id="hinh1" onclick="change1()" src="nar-1.png" height="250" width="250"/>
+    <img id="hinh2" onclick="change2()" src="tom-2.png" height="250" width="250"/> <br>
+    <img id="hinh3" onclick="change3()" src="one-3.png" height="250" width="250"/>
+    <img id="hinh4" onclick="change4()" src="adv-4.png" height="250" width="250"/> <br>
+</center>
+<button type="button" onclick="check()">Kết Quả</button>
+</body>
+<script>
+    function change1() {
+        let hinh1 = document.getElementById("hinh1");
+        if (hinh1.getAttribute('src') === "nar-1.png") {
+            hinh1.setAttribute('src', 'tom1-1.png')
+        } else if (hinh1.getAttribute('src') === "tom1-1.png") {
+            hinh1.setAttribute('src', 'adv-1.png')
+        } else if (hinh1.getAttribute('src') === "adv-1.png") {
+            hinh1.setAttribute('src', 'one-1.png')
+        } else {
+            hinh1.setAttribute('src', "nar-1.png")
+        }
+    }
+
+    function change2() {
+        let hinh2 = document.getElementById("hinh2");
+        if (hinh2.getAttribute('src') === "tom-2.png") {
+            hinh2.setAttribute('src', 'adv-2.png')
+        } else if (hinh2.getAttribute('src') === "adv-2.png") {
+            hinh2.setAttribute('src', 'nar-2.png')
+        } else if (hinh2.getAttribute('src') === "nar-2.png") {
+            hinh2.setAttribute('src', 'one-2.png')
+        } else {
+            hinh2.setAttribute('src', "tom-2.png")
+        }
+    }
+
+    function change3() {
+        let hinh3 = document.getElementById("hinh3");
+        if (hinh3.getAttribute('src') === "one-3.png") {
+            hinh3.setAttribute('src', 'tom3-3.png')
+        } else if (hinh3.getAttribute('src') === "tom3-3.png") {
+            hinh3.setAttribute('src', 'adv-3.png')
+        } else if (hinh3.getAttribute('src') === "adv-3.png") {
+            hinh3.setAttribute('src', 'nar-3.png')
+        } else {
+            hinh3.setAttribute('src', "one-3.png")
+        }
+    }
+
+    function change4() {
+        let hinh4 = document.getElementById("hinh4");
+        if (hinh4.getAttribute('src') === "adv-4.png") {
+            hinh4.setAttribute('src', 'nar-4.png')
+        } else if (hinh4.getAttribute('src') === "nar-4.png") {
+            hinh4.setAttribute('src', 'tom-4.png')
+        } else if (hinh4.getAttribute('src') === "tom-4.png") {
+            hinh4.setAttribute('src', 'one-4.png')
+        } else {
+            hinh4.setAttribute('src', "adv-4.png")
+        }
+    }
+
+    function check() {
+        if (hinh1.getAttribute("src") === "tom1-1.png" && hinh2.getAttribute("src") === "tom-2.png" && hinh3.getAttribute("src") === "tom3-3.png" && hinh4.getAttribute("src") === "tom-4.png") {
+            alert("Đây Là Hình Tom")
+        } else if (hinh1.getAttribute("src") === "nar-1.png" && hinh2.getAttribute("src") === "nar-2.png" && hinh3.getAttribute("src") === "nar-3.png" && hinh4.getAttribute("src") === "nar-4.png") {
+            alert("Đây Là Hình Naruto")
+        } else if (hinh1.getAttribute("src") === "one-1.png" && hinh2.getAttribute("src") === "one-2.png" && hinh3.getAttribute("src") === "one-3.png" && hinh4.getAttribute("src") === "one-4.png") {
+            alert("Đây Là Hình One Piece")
+        } else if (hinh1.getAttribute("src") === "adv-1.png" && hinh2.getAttribute("src") === "adv-2.png" && hinh3.getAttribute("src") === "adv-3.png" && hinh4.getAttribute("src") === "adv-4.png") {
+            alert("Đây Là Hình Adventure Time")
+        } else {
+            alert("Sai Rồi Nha ,Làm Lại Đi Bạn ơi!")
+        }
+    }
+</script>
+</html>
