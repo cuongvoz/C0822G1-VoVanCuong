@@ -8,7 +8,15 @@
 <script>
     let minute = +prompt("Nhập Số Phút Bạn Gọi Mỗi Ngày");
     let pay = minute * 220 * 30;
-    alert("Số Tiền Bạn Phải Đóng Cước Điện Thoại Theo Tháng " + pay +" VND");
+    if (pay < 100000) {
+        alert("Số Tiền Bạn Phải Đóng Tháng Là " + pay + " VND" + " Bạn Nên Đăng Kí Gói MP30X");
+    } else if (pay < 300000) {
+        alert("Số Tiền Bạn Phải Đóng Tháng Là " + pay + " VND" + " Bạn Nên Đăng Kí Gói MP50X");
+    } else if (pay < 500000) {
+        alert("Số Tiền Bạn Phải Đóng Tháng Là " + pay + " VND" + " Bạn Nên Đăng Kí Gói MP70X");
+    } else {
+        alert("Số Tiền Bạn Phải Đóng Tháng Là " + pay + " VND" + " Bạn Nên Đăng Kí Gói MP90X");
+    }
 </script>
 </body>
 </html>

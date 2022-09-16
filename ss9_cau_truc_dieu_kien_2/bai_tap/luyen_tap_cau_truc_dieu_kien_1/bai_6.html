@@ -7,8 +7,14 @@
 <body>
 <script>
     let doanhSo = +prompt("Hãy Nhập Doanh Số Của Bạn Tháng Này");
-    let hoaHong = doanhSo * 0.05;
-    alert("Số Hoa Hồng Của Bạn Là "+ hoaHong + " VND");
+    if (doanhSo > 300000000) {
+        alert("Hoa Hồng Của Bạn Là " + doanhSo * 0.5 + " VND");
+    } else if (doanhSo < 300000000 && doanhSo > 100000000) {
+        alert("Hoa Hồng Của Bạn Là " + doanhSo * 0.1 + " VND");
+    } else {
+        alert("Hoa Hồng Của Bạn Là " + doanhSo * 0.05 + " VND");
+    }
+
 </script>
 </body>
 </html>
