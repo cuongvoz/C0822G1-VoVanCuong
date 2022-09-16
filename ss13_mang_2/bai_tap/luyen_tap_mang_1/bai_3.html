@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [12, 54, 34, 51, 57, 16, 3, 44, 95, 31];
+    let max = 0;
+    let index = 0;
+    let i;
+    for (i = 0; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i];
+            index = i;
+        }
+        document.write("Giá trị Trung Bình Của Phần Tử " + i + " Là " + (array[i] / array.length) + '<br>');
+    }
+    alert("Giá Trị Lớn Nhất Là " + max + " Tại Phần Tử " + index);
+
+</script>
+</body>
+</html>

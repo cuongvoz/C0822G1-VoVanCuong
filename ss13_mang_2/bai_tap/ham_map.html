@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [
+        {
+            id: 51,
+            name: "Chú Cường Vlog",
+            address: "Gia Lai"
+        },
+        {
+            id: 24,
+            name: "Minh Vlog",
+            address: "Đà Nẵng"
+        }
+    ]
+    let newArray = array.map(function (name) {
+      if(name.id === 51) {
+          name.address = "Đà Nẵng"
+      }
+      return name
+    })
+    console.log(newArray)
+</script>
+</body>
+</html>

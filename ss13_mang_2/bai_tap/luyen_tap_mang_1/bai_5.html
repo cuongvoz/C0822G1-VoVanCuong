@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let size = +prompt("Bạn Nhập Số Ngẫu Nhiên !");
+    let bienDem = 0;
+    let i;
+    for (i = 0; i < size; i++) {
+        let numbers = [+prompt("Bạn Nhập Số Thứ " + (i + 1))];
+        for (j = 0; j < numbers.length; j++) {
+            if (numbers[j] < 0) {
+                bienDem++;
+            }
+        }
+    }
+    document.write("Có " + bienDem + " Số Là Số Nguyên Âm");
+
+</script>
+</body>
+</html>

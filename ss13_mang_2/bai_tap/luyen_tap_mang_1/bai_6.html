@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    for (let i = 0; i < 10; i++) {
+        array[i] = +prompt("Nhập Phần Tử Thứ " + (i + 1));
+    }
+    let v = +prompt("Số Bạn Muốn Kiểm Tra Xem Có Trong Mảng Hay Không");
+    if (array.includes(v) === true) {
+        document.write("Giá Trị " + v + " Có Trong Mảng");
+    } else {
+        document.write("Giá Trị " + v + " Không Có Trong Mảng");
+    }
+</script>
+</body>
+</html>

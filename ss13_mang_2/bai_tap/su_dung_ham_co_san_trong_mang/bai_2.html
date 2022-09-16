@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn</title>
+</head>
+<body>
+<script>
+    let numbers = prompt();
+    let array = numbers.toString();
+    let value = [array[0]];
+    for (let i = 1; i < array.length; i++) {
+        if (array[i-1] % 2 === 0 && array[i] % 2 === 0) {
+            value.push('-',array[i]);
+        } else {
+            value.push(array[i]);
+        }
+    } document.write(value.join(""));
+</script>
+</body>
+</html>

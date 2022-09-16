@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [12, 3, 4, 6, 44, 63, -3];
+    let first = 0;
+    let last = array.length - 1;
+    let x = 0;
+    do {
+        x = array[first];
+        array[first] = array[last];
+        array[last] = x;
+        first++;
+        last--;
+    } while (first < last);
+    document.write(array);
+</script>
+</body>
+</html>

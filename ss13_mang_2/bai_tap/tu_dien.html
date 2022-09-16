@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="string">
+<button type="button" onclick="tuDien()">Dịch</button>
+<p id="result"></p>
+<script>
+    function tuDien() {
+        let textValue = document.getElementById("text").value;
+        let english = ["banana", "Apple", "Orange", "Grape", "Mango"];
+        let tiengViet = ["Chuối", "Táo", "Cam", "Nho", "Xoài"];
+        for (let i = 0; i < textValue.length; i++) {
+            if (english[i] === textValue) {
+                document.getElementById("result").innerHTML = tiengViet[i];
+            }
+        }
+    }
+</script>
+</body>
+</html>

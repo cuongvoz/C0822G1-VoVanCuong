@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let text = prompt("Nhập Kí Tự Muốn Đảo Ngược In Hoa Và In Thường");
+    let array = text.toString();
+    let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let lower = 'abcdefghijklmnopqrstuvwxyz';
+   let ketQua = [];
+   for (let i = 0; i < array.length; i++) {
+       if (upper.indexOf(array[i]) !== -1) {
+           ketQua.push(array[i].toLowerCase());
+       } else if (lower.indexOf(array[i]) !== -1) {
+           ketQua.push(array[i].toUpperCase());
+       } else {
+           ketQua.push(array[i]);
+       }
+   }  document.write(ketQua.join(""));
+
+</script>
+</body>
+</html>
