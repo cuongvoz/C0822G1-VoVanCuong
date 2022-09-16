@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Simple Screen</h3>
+<input type="text" id="txtValue"/>
+<button type="button" onclick="add_element_to_array();">Add</button>
+<button type="button" onclick="display_array();">Display</button>
+<p id="result"></p>
+</body>
+<script>
+    let x = 0;
+    let array = [];
+    function add_element_to_array() {
+        array[x] = document.getElementById("txtValue").value;
+        alert("Phần Tử " + array[x] + " Thuộc Vị Trí " + x);
+        x++;
+        document.getElementById("txtValue").value = "";
+    }
+    function display_array() {
+        let chuCuongVlog = "<hr/>";
+        for (i = 0; i < array.length; i++) {
+            chuCuongVlog = chuCuongVlog + "Phần Tử " + array[i] + " Thuộc Vị Trí " + i + "<br/>";
+        }
+        document.getElementById("result").innerHTML = chuCuongVlog;
+    }
+</script>
+</html>

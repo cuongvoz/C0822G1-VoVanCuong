@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let array1 = [
+        {
+            id: 64,
+            name: "Chú Cường",
+            address: "Gia Lai"
+        },
+        {
+            id:54,
+            name: "Minh Vlog",
+            address: "Đà Nẵng"
+        }
+    ];
+
+    let array2 = [
+        {
+            id: 12,
+            name: "Phúc Vlog",
+            address: "Đà nẵng"
+        },
+        {
+            id: 98,
+            name: "Diễm Vlog",
+            address: "Quảng Nôm"
+        }
+    ];
+    let newArray = array1.concat(array2);
+    for (i = 0; i < newArray.length; i++) {
+       if (newArray[i].id == 54) {
+           newArray.splice(i ,1)
+       }
+
+    }
+    console.log(newArray)
+</script>
+</body>
+</html>
