@@ -6,10 +6,11 @@
 </head>
 <body>
 <script>
-    let array = ['chú','-','Cường','-','vlog','-','Ảo','-','thật','-','Đấy'];
+    let text = prompt("Nhập Một Dãy Kí Tự Bất Kì");
+    let array = text.split("");
     for (let i = 0; i < array.length; i++) {
-        if (array[i] == "-") {
-            array.splice(i,1,"_");
+        if (array[i] === "-") {
+            array[i] = "_";
         }
     } document.write(array.join(""));
 </script>
