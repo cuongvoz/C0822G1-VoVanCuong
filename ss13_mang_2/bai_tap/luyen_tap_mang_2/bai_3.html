@@ -6,8 +6,13 @@
 </head>
 <body>
 <script>
-    let array = [1,32,45,21,45,5,9,64,15,35,15];
-    document.write("Mảng Có " + array.length + " Kí Tự" );
+    let array = ["Chú",12, 3, 5, 14,45,"Cường","dsa","Còn", "Đúng", "Ảo", "Thật", 66];
+    let count = 0;
+    for (let i = 0;i <array.length; i++) {
+        if (array[i] % 2 === 0 || array[i] % 1 === 0) {
+            count++;
+        }
+    } document.write("mảng Có " + count + " Số");
 </script>
 </body>
 </html>
