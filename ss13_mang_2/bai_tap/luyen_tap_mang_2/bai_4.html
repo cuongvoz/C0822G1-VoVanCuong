@@ -6,13 +6,10 @@
 </head>
 <body>
 <script>
-    let array = ["Chú","Cường","Vlog","Ảo","Thật","Đấy"];
-    let count = 0;
-    for (let i = 0 ; i < array.length; i++) {
-        if (isNaN(array[i])) {
-            count++;
-        }
-    }document.write(count + " Quá Đỉnh");
+    let array = ["Chú Cường Vlog","Ảo","Thật","Đấy"];
+    for (let i = 0; i < array.length; i++) {
+     document.write(array[i] + " Có " + array[i].length + " Kí Tự" + "<br>")
+    }
 </script>
 </body>
 </html>
