@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+      function timGiaTriNhoNhat(array) {
+       let min = array[0];
+       for (let i = 0; i < array.length; i++) {
+           if (min > array[i]) {
+               min = array[i];
+           }
+       } return min;
+      }
+      let array1 = [12,35,16,48,365,15,14,28,98,45,6,7];
+      let result = document.write("Giá Trị Nhỏ Nhất Là " + timGiaTriNhoNhat(array1));
+  </script>
+</body>
+</html>

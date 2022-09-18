@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function play(answer) {
+        let result = "";
+        if (answer) {
+            result = "Chú Cường Vlog Ảo Thật Đấy";
+        } else {
+            result = "Còn Đúng Cái Nịt";
+        }
+        return result;
+    }
+
+    let comfirmAnswer = play(confirm("Chọn Đi"));
+    alert(comfirmAnswer);
+</script>
+</body>
+</html>

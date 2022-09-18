@@ -5,15 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-
 <script>
-    let text = prompt("Nhập Một Dãy Kí Tự Bất Kì");
-    let array = text.split("");
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] === "-") {
-            array[i] = "_";
+    function timGiaTriNhoNhat(array) {
+        let min = array[0];
+        for (let i = 0; i < array.length; i++) {
+            if (min > array[i]) {
+                min = array[i];
+            }
         }
-    } document.write(array.join(""));
+        return min;
+    }
+    let array1 = [35, 15, 36, 14, 92, 78, 39, 39, 25, 14];
+    let result = document.write("Giá Trị Nhỏ Nhất Trong Mảng là " + timGiaTriNhoNhat(array1));
 </script>
 </body>
 </html>

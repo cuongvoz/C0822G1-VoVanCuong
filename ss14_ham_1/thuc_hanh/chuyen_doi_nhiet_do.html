@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Temperature Converter</h2>
+<p>Type a value in The Fahrenheit field to convert to the Celius</p>
+<span>Fahrenheit : </span> <input type="number" oninput="convert(this.value)" id="input"> <br> <br>
+<span> Celius : </span> <span id="result"></span>
+</body>
+<script>
+ function convert(value) {
+   document.getElementById("result").innerHTML = (value - 32) / 1.8;
+ }
+</script>
+</html>

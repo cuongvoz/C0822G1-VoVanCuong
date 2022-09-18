@@ -6,29 +6,21 @@
 </head>
 <body>
 <script>
-    let soLanLap = +prompt("Nhập N Số Nguyên Tố Hiển Thị Đầu Tiên");
-    let count = 0;
     let n = 2;
-    let result = "";
-    while (count < soLanLap) {
-        let so = true;
-        if (n < 2) {
-            so = false;
-        } else {
-            for (i = 2; i < (n - 1); i++) {
-                if (n % i === 0) {
-                    so = false;
-                    break;
-                }
+    let soLuongSNT = 0;
+    while (soLuongSNT <= 20) {
+        let cout = 0;
+        for (let i = 1; i <= n; i++) {
+            if (n % i === 0) {
+                cout++;
             }
         }
-        if (so) {
-            count = count + 1;
-            result += n + "<br>";
+        if (cout === 2) {
+            soLuongSNT++;
+            document.write(n + "<br>");
         }
-        n = n + 1;
+        n++;
     }
-    document.write(result);
 </script>
 </body>
 </html>
