@@ -6,7 +6,6 @@
 </head>
 <body>
 <script>
-
     function isPrime(number) {
         let count = 0;
         for (let i = 1; i <= number; i++) {
@@ -20,11 +19,11 @@
             return false;
         }
     }
-    let a =[7,5,6,3,9];
-    for (let i = 0; i <a.length ; i++) {
-        if (isPrime(a[i])){
-            alert(a[i]);
-        }
+    let number = +prompt("Nhập Số Muốn Kiểm Tra");
+    if (isPrime(number)) {
+        alert(number + " Là Số Nguyên Tố");
+    } else {
+        alert(number + " Không Phải Là Số Nguyên Tố");
     }
 </script>
 </body>

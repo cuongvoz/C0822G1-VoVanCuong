@@ -6,17 +6,23 @@
 </head>
 <body>
 <script>
-    function timGiaTriNhoNhat(array) {
-        let min = array[0];
-        for (let i = 0; i < array.length; i++) {
-            if (min > array[i]) {
-                min = array[i];
-            }
-        }
-        return min;
+    let array = [];
+    for (let i = 0; i < 8; i++) {
+        let number = +prompt("Nhập Số Thứ " + (i+1));
+        array[i] = number;
     }
-    let array1 = [35, 15, 36, 14, 92, 78, 39, 39, 25, 14];
-    let result = document.write("Giá Trị Nhỏ Nhất Trong Mảng là " + timGiaTriNhoNhat(array1));
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        count += array[i]
+    }
+    let bienDem = 0;
+    let giaTriTrungBinh = count / array.length;
+    for (let j = 0; j < array.length; j++) {
+        if (giaTriTrungBinh == array[j]) {
+            bienDem++;
+        }
+    }
+    document.write("Có " + bienDem + " Số Bằng Giá Trị Trung Bình " + giaTriTrungBinh);
 </script>
 </body>
 </html>

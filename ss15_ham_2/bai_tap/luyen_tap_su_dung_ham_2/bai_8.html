@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function swap(arrayNumber) {
+        let arrayFix = [];
+        for (let i = 0; i < arrayNumber.length; i++) {
+            arrayFix.unshift(arrayNumber[i]);
+        }
+        return arrayFix;
+    }
+
+    let array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    document.write(swap(array1));
+</script>
+</body>
+</html>

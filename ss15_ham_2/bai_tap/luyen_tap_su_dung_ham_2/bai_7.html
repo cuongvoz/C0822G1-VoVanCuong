@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    function swap(a, b) {
+        array[0] = a;
+        array[1] = b;
+        return array.reverse().join(" ");
+    }
+    let num1 = +prompt("Nhập Số Thứ Nhất");
+    let num2 = +prompt("Nhập Số Thứ Hai");
+    alert(swap(num1,num2))
+</script>
+</body>
+</html>

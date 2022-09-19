@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function tinhGiaiThua(number) {
+          let result = 1;
+       for (let i = 1 ; i <= number; i++) {
+           result *= i;
+       }
+          return result;
+    }
+    let number = +prompt("Nhập Số Muốn Tính Giai Thừa");
+    alert("Giai Thừa Của " + number + " Là " + tinhGiaiThua(number));
+</script>
+</html>
