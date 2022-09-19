@@ -8,16 +8,14 @@
 <script>
     let array = [12, 54, 34, 51, 57, 16, 3, 44, 95, 31];
     let max = 0;
-    let index = 0;
-    let i;
-    for (i = 0; i < array.length; i++) {
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
         if (array[i] > max) {
             max = array[i];
-            index = i;
         }
-        document.write("Giá trị Trung Bình Của Phần Tử " + i + " Là " + (array[i] / array.length) + '<br>');
+        count += array[i]
     }
-    alert("Giá Trị Lớn Nhất Là " + max + " Tại Phần Tử " + index);
+    document.write("Giá Trị Trung Bình Là : " + count / array.length + " Và Phần Tử Lớn Nhất Là : " + max);
 
 </script>
 </body>

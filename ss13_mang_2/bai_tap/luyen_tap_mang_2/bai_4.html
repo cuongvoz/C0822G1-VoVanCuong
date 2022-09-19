@@ -7,12 +7,15 @@
 <body>
 <script>
     let text = prompt("Nhập Dòng Chữ Bất Kì");
-    let array = text.split("");
+    let array = text.split(" ");
     let count = 0;
     for (let i = 0; i < array.length; i++) {
-        count++;
-    }
-    document.write("Chuỗi " + array.join("") + " Có " + count + " Từ");
+       if (array[i] !== "") {
+           count++;
+       }
+    } alert("Có " + count + " Từ");
+
+
 </script>
 </body>
 </html>

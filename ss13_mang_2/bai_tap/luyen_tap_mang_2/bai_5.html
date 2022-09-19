@@ -6,12 +6,24 @@
 </head>
 <body>
 <script>
-    let text1 = prompt('Nhập Chuỗi 1');
-    let text2 = prompt('Nhập Chuỗi 2');
-    if (text1 == text2) {
-        alert("Hai Chuỗi Giống Nhau");
+    let string1 = prompt("Nhập Chuỗi Thứ Nhất");
+    let string2 = prompt("Nhập Chuỗi Thứ Hai");
+    let array1 = string1.split("");
+    let array2 = string2.split("");
+    let count = 0;
+    if (array1.length !== array2.length) {
+        alert("Chuỗi Khác Nhau");
     } else {
-        alert("Hai Chuỗi Khác Nhau");
+        for (let i = 0; i < array1.length; i++) {
+            if (array1[i] !== array2[i]) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            alert("Chuỗi Giống Nhau");
+        } else {
+            alert("Chuỗi Khác Nhau");
+        }
     }
 </script>
 </body>

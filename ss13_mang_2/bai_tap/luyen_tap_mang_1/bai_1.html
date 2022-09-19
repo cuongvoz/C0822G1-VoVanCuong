@@ -9,10 +9,12 @@
 </body>
 <script>
     let array = [1,2,4,5,875,12,356,11,224,41];
+    let count = 0;
     for (let i = 0;i < array.length; i++) {
         if (array[i] > 10) {
-            document.write(array[i] + "<br>");
+            count++;
         }
     }
+    document.write("Số Lượng Số Lớn Hơn 10 Là : " + count);
 </script>
 </html>

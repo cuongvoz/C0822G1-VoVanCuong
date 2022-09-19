@@ -10,16 +10,17 @@
     let array = text.toString();
     let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let lower = 'abcdefghijklmnopqrstuvwxyz';
-   let ketQua = [];
-   for (let i = 0; i < array.length; i++) {
-       if (upper.indexOf(array[i]) !== -1) {
-           ketQua.push(array[i].toLowerCase());
-       } else if (lower.indexOf(array[i]) !== -1) {
-           ketQua.push(array[i].toUpperCase());
-       } else {
-           ketQua.push(array[i]);
-       }
-   }  document.write(ketQua.join(""));
+    let ketQua = [];
+    for (let i = 0; i < array.length; i++) {
+        if (upper.indexOf(array[i]) !== -1) {
+            ketQua.push(array[i].toLowerCase());
+        } else if (lower.indexOf(array[i]) !== -1) {
+            ketQua.push(array[i].toUpperCase());
+        } else {
+            ketQua.push(array[i]);
+        }
+    }
+    document.write(ketQua.join(""));
 
 </script>
 </body>
