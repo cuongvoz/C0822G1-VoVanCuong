@@ -5,59 +5,60 @@
     <title>Title</title>
 </head>
 <body>
-<h3>Add New Product</h3>
-<input type="text" id="nhap">
+<input type="text" id="text">
 <button onclick="themSanPham()">Add</button>
-<h3>Display All Product</h3>
-<p><b>Product Name</b></p>
-<div id="hienthi"></div>
+<p id="result"></p>
 </body>
 <script>
-    let danhSachSanPham = ["Sony Xperia", "Sam Sung Galaxy", "Nokia 6"];
-    hienThi()
+    let danhSanhSP = ["Sony Xperia", "Sam Sung Galaxy", "Nokia 6"];
+    hienThi();
 
     function hienThi() {
-        let tableString = '<table border="1" cellpadding="10px" cellspacing="1">' +
+        let tableString = '<table class="table table-dark table-striped">' +
             '<tr>' +
             '<th>STT</th>' +
             '<th>Tên Sản Phẩm</th>' +
-            '<th>Edit</th>' +
-            '<th>Delete</th>' +
+            '<th>Sửa</th>' +
+            '<th>Xóa</th>' +
             '</tr>'
-        for (let i = 0; i < danhSachSanPham.length; i++) {
-            tableString += '<tr>' +
+        for (let i = 0; i < danhSanhSP.length; i++) {
+            tableString +=
+                '<tr>' +
                 '<td>' + (i + 1) + '</td>' +
-                '<td>' + danhSachSanPham[i] + '</td>' +
-                '<td> <input type="button" onclick="suaSanPham(' + i + ')" value="Edit"></td>' +
-                '<td> <input type="button" onclick="xoaSanPham(' + i + ')" value="Delete"></td>' +
+                '<td>' + danhSanhSP[i] + '</td>' +
+                '<td><input type="button" onclick="suaSanPham(' + i + ')" value="Edit"> </td>' +
+                '<td><input type="button" onclick="xoaSanPham(' + i + ')" value="Delete"></td>' +
                 '</tr>'
         }
         tableString += '</table>'
-        document.getElementById("hienthi").innerHTML = tableString;
+        document.getElementById("result").innerHTML = tableString;
     }
 
     function themSanPham() {
-        let newProduct = document.getElementById("nhap").value;
-        if (newProduct == "") {
-            alert("Bạn Hãy Nhập Tên Sản Phẩm");
+        let sanPham = document.getElementById("text").value;
+        if (sanPham == "") {
+            alert("Bạn Hãy Nhập Lại Tên Sản Phẩm");
         } else {
-            danhSachSanPham.push(newProduct);
-            document.getElementById("nhap").value = "";
+            danhSanhSP.push(sanPham);
             hienThi();
+            document.getElementById("text").value = "";
         }
     }
 
     function xoaSanPham(index) {
-        danhSachSanPham.splice(index, 1);
-        hienThi();
+        let comf = confirm("Bạn Có Chắc Choắn Muốn Xóa ?");
+        if (comf) {
+            danhSanhSP.splice(index, 1);
+            hienThi();
+        }
     }
 
     function suaSanPham(index) {
-        let tenMoiSanPham = prompt("Nhập Tên Muốn Sửa");
-        if (tenMoiSanPham == "") {
-            alert("Xin Hãy Nhập Lại Tên");
+        let changeProduct = prompt("Nhập Tên Mới Của Sản Phẩm Vào Đây");
+        if (changeProduct == "") {
+            alert("Hãy Nhập Lại Tên");
         } else {
-            danhSachSanPham[index] = tenMoiSanPham
+            danhSanhSP[index] = changeProduct;
             hienThi();
         }
     }
