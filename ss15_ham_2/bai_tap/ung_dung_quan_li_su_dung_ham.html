@@ -5,37 +5,61 @@
     <title>Title</title>
 </head>
 <body>
-<h2>Add New Product</h2>
-
-<input type="text" placeholder="New Product" id="txtvalue"/>
-<button type="button" onclick="addNewProduct()">Add</button>
-<h2>Display All Product</h2>
+<h3>Add New Product</h3>
+<input type="text" id="nhap">
+<button onclick="themSanPham()">Add</button>
+<h3>Display All Product</h3>
 <p><b>Product Name</b></p>
-<p id="result"></p>
-<form>
-    <table>
-
-    </table>
-</form>
+<div id="hienthi"></div>
 </body>
-
 <script>
-    let array = [];
-    let x = 0;
-    let count = "" ;
-    function addNewProduct() {
-        let sanPham = document.getElementById("txtvalue").value;
-        count += sanPham + "<br>";
-        array.push(count);
-        document.getElementById("result").innerHTML = array[x] + "<br>"
-        document.getElementById("txtvalue").value = "";
-        x++;
-    }
-    function editProduct() {
+    let danhSachSanPham = ["Sony Xperia", "Sam Sung Galaxy", "Nokia 6"];
+    hienThi()
 
+    function hienThi() {
+        let tableString = '<table border="1" cellpadding="10px" cellspacing="1">' +
+            '<tr>' +
+            '<th>STT</th>' +
+            '<th>Tên Sản Phẩm</th>' +
+            '<th>Edit</th>' +
+            '<th>Delete</th>' +
+            '</tr>'
+        for (let i = 0; i < danhSachSanPham.length; i++) {
+            tableString += '<tr>' +
+                '<td>' + (i + 1) + '</td>' +
+                '<td>' + danhSachSanPham[i] + '</td>' +
+                '<td> <input type="button" onclick="suaSanPham(' + i + ')" value="Edit"></td>' +
+                '<td> <input type="button" onclick="xoaSanPham(' + i + ')" value="Delete"></td>' +
+                '</tr>'
+        }
+        tableString += '</table>'
+        document.getElementById("hienthi").innerHTML = tableString;
     }
-    function deleteProduct() {
 
+    function themSanPham() {
+        let newProduct = document.getElementById("nhap").value;
+        if (newProduct == "") {
+            alert("Bạn Hãy Nhập Tên Sản Phẩm");
+        } else {
+            danhSachSanPham.push(newProduct);
+            document.getElementById("nhap").value = "";
+            hienThi();
+        }
+    }
+
+    function xoaSanPham(index) {
+        danhSachSanPham.splice(index, 1);
+        hienThi();
+    }
+
+    function suaSanPham(index) {
+        let tenMoiSanPham = prompt("Nhập Tên Muốn Sửa");
+        if (tenMoiSanPham == "") {
+            alert("Xin Hãy Nhập Lại Tên");
+        } else {
+            danhSachSanPham[index] = tenMoiSanPham
+            hienThi();
+        }
     }
 </script>
 </html>

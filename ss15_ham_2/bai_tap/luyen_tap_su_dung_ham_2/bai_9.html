@@ -6,15 +6,17 @@
 </head>
 <body>
 <script>
+    let string = prompt("Nhập Dãy Kí Tự Vào Đây");
+    let array1 = string.split("")
     function kiemTraMangKiTu(array) {
-        let findCharacter = +prompt("Nhập Kí Tự Muốn Kiểm Tra");
+        let findCharacter = prompt("Nhập Kí Tự Muốn Kiểm Tra");
         let cout = 0;
         for (let i = 0; i < array.length; i++) {
             if (findCharacter == array[i]) {
                 cout++;
             }
         }
-        for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
             if (array.includes(findCharacter)) {
                 return "Kí Tự " + findCharacter + " Có Trong Mảng" + " Và Xuất Hiện " + cout + " Lần ";
             } else {
@@ -22,7 +24,6 @@
             }
         }
     }
-    let array1 = ['d', 1, 2, 6, 'g', 'y', '-', '_', '_', 6, 6];
     alert(kiemTraMangKiTu(array1))
 </script>
 </body>
