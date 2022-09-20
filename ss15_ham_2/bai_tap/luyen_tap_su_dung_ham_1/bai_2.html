@@ -5,15 +5,17 @@
     <title>Tăng Lên 1</title>
 </head>
 <body>
-<button type="button" onclick="tangLenMot()">Click Me</button>
+<button onclick="tangLenMot()">Click Me</button>
 </body>
 <script>
     function tangLenMot() {
-      let number = +prompt("Nhập Số Vào Đây");
-      function congMot(a) {
-       return a + 1;
-      }
-      alert(congMot(number));
+        let number = +prompt("Nhập Số Vào Đây");
+
+        function congMot(a) {
+            return a + 1;
+        }
+
+        alert("Đã Tăng " + number + " Lên : " + congMot(number));
     }
 </script>
 </html>

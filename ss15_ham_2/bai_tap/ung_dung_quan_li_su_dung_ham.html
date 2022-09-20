@@ -5,6 +5,37 @@
     <title>Title</title>
 </head>
 <body>
+<h2>Add New Product</h2>
 
+<input type="text" placeholder="New Product" id="txtvalue"/>
+<button type="button" onclick="addNewProduct()">Add</button>
+<h2>Display All Product</h2>
+<p><b>Product Name</b></p>
+<p id="result"></p>
+<form>
+    <table>
+
+    </table>
+</form>
 </body>
+
+<script>
+    let array = [];
+    let x = 0;
+    let count = "" ;
+    function addNewProduct() {
+        let sanPham = document.getElementById("txtvalue").value;
+        count += sanPham + "<br>";
+        array.push(count);
+        document.getElementById("result").innerHTML = array[x] + "<br>"
+        document.getElementById("txtvalue").value = "";
+        x++;
+    }
+    function editProduct() {
+
+    }
+    function deleteProduct() {
+
+    }
+</script>
 </html>
