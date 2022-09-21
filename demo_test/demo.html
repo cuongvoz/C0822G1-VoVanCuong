@@ -5,24 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-<script>
-    let array = [];
-    for (let i = 0; i < 8; i++) {
-        let number = +prompt("Nhập Số Thứ " + (i+1));
-        array[i] = number;
-    }
-    let count = 0;
-    for (let i = 0; i < array.length; i++) {
-        count += array[i]
-    }
-    let bienDem = 0;
-    let giaTriTrungBinh = count / array.length;
-    for (let j = 0; j < array.length; j++) {
-        if (giaTriTrungBinh == array[j]) {
-            bienDem++;
-        }
-    }
-    document.write("Có " + bienDem + " Số Bằng Giá Trị Trung Bình " + giaTriTrungBinh);
-</script>
+<h3>Add New Product</h3>
+<input type="text" id="nhap">
+<button type="button" onclick="addProduct()">Add</button>
+<h3>Display Product</h3>
+<p id="hienthibang"></p>
 </body>
+<script>
+
+</script>
 </html>

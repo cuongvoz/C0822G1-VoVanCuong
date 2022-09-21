@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="DemoCanvas" width="500" height="600"></canvas>
+</body>
+<script>
+    class Retangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+        getWidth() {
+            return this.width;
+        }
+        getHeight() {
+            return this.height;
+        }
+        getArea() {
+            return "Diện Tích Hình Chữ Nhật Là : " + this.width * this.height;
+        }
+        getPerimeter() {
+            return "Chu Vi Hình Chữ Nhật Là : " + (this.height + this.width) * 2;
+        }
+        display() {
+            var canvas = document.getElementById("DemoCanvas");
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+                ctx.fillStyle = "pink";
+                ctx.fillRect(0, 0, this.width, this.height);
+            }
+        }
+    }
+    let hcn1 = new Retangle(1000, 300);
+    alert(hcn1.getPerimeter());
+    alert(hcn1.getArea());
+    hcn1.display();
+
+</script>
+</html>

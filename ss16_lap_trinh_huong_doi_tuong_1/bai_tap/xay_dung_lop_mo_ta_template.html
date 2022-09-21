@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    class Template {
+        constructor(doC) {
+            this.doC = doC;
+        }
+        getDoF() {
+            return (this.doC * 9/5 + 32);
+        }
+        getDoKenvin() {
+            return this.doC + 273.15;
+        }
+    }
+    let template = new Template(25);
+    let nhietDoF = template.getDoF();
+    let nhietDoK = template.getDoKenvin();
+    document.write("Nhiệt Độ F : " + nhietDoF + "<br>");
+    document.write("Nhiệt Độ K : " + nhietDoK);
+</script>
+</html>
