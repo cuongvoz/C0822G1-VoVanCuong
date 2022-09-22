@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    class Apple {
+        constructor() {
+            this.weight = 10;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return document.write("Quả Táo Còn " + this.weight + " Đơn Vị" + "<br>");
+        }
+
+        decreaseWeight() {
+            if (this.isEmpty()) {
+                alert("Táo đã hết rồi");
+            } else {
+                this.weight--;
+            }
+        }
+
+        isEmpty() {
+            if (this.weight <= 0) {
+                return true + document.write(" Hết Táo" + "<br>");
+            } else {
+                return false;
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = true;
+            this.weight = weight;
+        }
+
+        isMale() {
+            if (this.gender === true) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        setGender() {
+            if (this.isMale()) {
+                return "Male";
+            } else {
+                return "Famale";
+            }
+        }
+
+        checkApple(Apple) {
+            if (Apple.isEmpty()) {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+
+        eat(Apple) {
+            return Apple.decreaseWeight() + this.weight++ +
+                document.write(this.name + " Ăn Táo" + "<br>");
+        }
+
+        say(text) {
+            return document.write(this.name + " Nói " + text + "<br>");
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getWeight() {
+            return document.write("Cân Nặng Của " + this.name +
+                " Là " + this.weight + " Đơn Vị" + " <br>");
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+    }
+
+    let apple = new Apple();
+    let adam = new Human("Adam", true, 65);
+    let eva = new Human("Eva", false, 55);
+    while (apple.isEmpty() == false) {
+        adam.eat(apple)
+        apple.getWeight();
+        adam.getWeight()
+        eva.eat(apple);
+        apple.getWeight();
+        eva.getWeight();
+        document.write("<br>" + " <br>");
+
+    }
+</script>
+</html>

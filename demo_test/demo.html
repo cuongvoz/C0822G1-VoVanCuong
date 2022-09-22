@@ -7,11 +7,52 @@
 <body>
 <h3>Add New Product</h3>
 <input type="text" id="nhap">
-<button type="button" onclick="addProduct()">Add</button>
+<button type="button" onclick="addSanPham()">Add</button>
 <h3>Display Product</h3>
 <p id="hienthibang"></p>
 </body>
 <script>
+let danhSachSP = ["Iphone","Sam Sung","Sony Xperia","Oppo"];
+  hienThi();
+  function hienThi() {
+     let tableString = '<table border="1">'
+      for (let i = 0 ;i < danhSachSP.length; i++) {
+          tableString +=
+          '<tr>' +
+          '<th>'+ danhSachSP[i] +'</th>'+
+          '<th><input type="button" onclick="suaSP('+i+')" value="Edit"></th>'+
+          '<th><input type="button" onclick="deleteSP('+i+')" value="Delete"></th>'+
+          '</tr>'
+      }
+      tableString += '</table>'
+      document.getElementById("hienthibang").innerHTML = tableString;
+  }
+  function  addSanPham() {
+   let tenSP = document.getElementById("nhap").value;
+   if (tenSP == "") {
+       alert("Hãy Nhập Tên Sản Phẩm")
+   } else {
+       danhSachSP.push(tenSP)
+       hienThi();
+       document.getElementById("nhap").value = "";
+   }
 
+  }
+function deleteSP(index) {
+    let comf = confirm("Bạn có chắc chắn muốn xóa sản phẩm? ")
+    if (comf) {
+        danhSachSP.splice(index,1)
+        hienThi();
+    }
+}
+function suaSP(index) {
+   let changeName = prompt("Nhập Tên Sản Phẩm");
+   if (changeName == "") {
+       alert("Vui Lòng Nhập Lại Tên Sản Phẩm");
+   } else {
+       danhSachSP[index] = changeName;
+       hienThi();
+   }
+}
 </script>
 </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+class Pattery {
+    constructor(energy) {
+        this.enery = energy;
+    }
+    setEnergy(energy) {
+        this.enery = energy
+    }
+    getEnergy() {
+        return this.enery
+    }
+}
+class FlashLamp {
+    constructor(battery) {
+        this.battery = battery;
+        this.status = true;
+    }
+    setPattery(pattery) {
+        this.pattery = pattery;
+    }
+    getInfoBattery() {
+        return this.pattery.getEnergy();
+    }
+    turnOn() {
+        this.status = true;
+    }
+    turnOff() {
+        this.status = false;
+    }
+    light() {
+        if (this.status) {
+            alert("Đèn Đã Sáng");
+        } else {
+            alert("Đèn Đã tăt");
+        }
+
+    }
+}
+let pattery = new Pattery();
+pattery.setEnergy(10);
+let flashLamp = new FlashLamp();
+flashLamp.setPattery(pattery);
+flashLamp.getInfoBattery();
+let congTac = confirm("Bật Hay Tắt?");
+if (congTac) {
+    flashLamp.turnOn();
+} else {
+    flashLamp.turnOff();
+}
+flashLamp.light();
+</script>
+</body>
+</html>
