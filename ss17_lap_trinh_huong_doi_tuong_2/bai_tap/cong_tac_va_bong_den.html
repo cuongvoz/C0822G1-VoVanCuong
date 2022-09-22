@@ -7,42 +7,50 @@
 <body>
 </body>
 <script>
-class BongDen {
-    constructor(status) {
-        this.status = status;
+    class BongDen {
+        constructor(status) {
+            this.status = status;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        turnOn() {
+            this.status = "Đèn Đã Bật" + "<br>";
+        }
+
+        turnOff() {
+            this.status = "Đèn Đã Tắt" + "<br>";
+        }
     }
-    getStatus() {
-        return this.status;
+
+    class CongTacDen {
+        constructor(status, bongDen) {
+            this.status = status;
+            this.bongDen = bongDen;
+        }
+
+        ketNoiBongDen(bongDen) {
+            this.status = bongDen.status;
+        }
+
+        switchOn() {
+            this.bongDen.turnOn();
+        }
+
+        switchOff() {
+            this.bongDen.turnOff();
+        }
     }
-    turnOn() {
-        this.status = "Đèn Đã Bật" + "<br>";
+
+    let bongDen1 = new BongDen(true);
+    let congTac1 = new CongTacDen(true, bongDen1);
+    for (let i = 0; i < 10; i++) {
+        congTac1.switchOn();
+        document.write(bongDen1.getStatus());
+        congTac1.switchOff();
+        document.write(bongDen1.getStatus());
     }
-    turnOff() {
-        this.status = "Đèn Đã Tắt" + "<br>";
-    }
-}
-class CongTacDen {
-    constructor(status,bongDen) {
-        this.status = status;
-        this.bongDen = bongDen;
-    }
-    ketNoiBongDen(bongDen) {
-        this.status = bongDen.status;
-    }
-    switchOn() {
-        this.bongDen.turnOn();
-    }
-    switchOff() {
-        this.bongDen.turnOff();
-    }
-}
-let bongDen1 = new BongDen(true);
-let congTac1 = new CongTacDen(true,bongDen1);
-for (let i = 0; i < 10; i++) {
-    congTac1.switchOn();
-    document.write(bongDen1.getStatus());
-    congTac1.switchOff();
-    document.write(bongDen1.getStatus());
-}
 </script>
 </html>
