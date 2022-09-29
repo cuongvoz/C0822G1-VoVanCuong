@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let text = prompt("Nhập");
+
+    function check(strings) {
+        let arr = strings.split("");
+        arr.sort();
+        let first = arr[0]
+        let newArr = [];
+        for (let i = 0; i < arr.length - 1; i++) {
+            if (arr[i] !== arr[i + 1]) {
+                newArr.push(arr[i + 1]);
+            }
+        }
+        newArr.unshift(first);
+        document.write("Có " + newArr.length + " Kí Tự Khác Nhau Là : " + newArr.join(" "));
+    }
+
+    check(text);
+</script>
+</body>
+</html>

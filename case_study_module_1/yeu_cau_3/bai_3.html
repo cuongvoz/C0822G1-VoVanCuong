@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = [5, 2, 5, 5];
+    let arr2 = [6, 3, 4, 2];
+    let max = arr1[0] / arr2[0];
+    let index;
+    for (let i = 0; i < arr1.length; i++) {
+        if (max < arr1[i] / arr2[i]) {
+            max = arr1[i] / arr2[i];
+            index = i;
+        }
+    }
+    document.write(arr1[index] + "/" + arr2[index] + " Là Phân Số Lớn Nhất Có Chỉ Số Là : " + index);
+
+
+</script>
+</body>
+</html>

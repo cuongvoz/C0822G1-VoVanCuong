@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let text1 = prompt("Nhập Chuỗi 1");
+    let text2 = prompt("Nhập Chuỗi 2");
+
+    function check(s1, s2) {
+        let newArr = [];
+        let arr1 = s1.split("");
+        let arr2 = s2.split("");
+        for (let i = 0; i < arr1.length; i++) {
+            for (let j = 0; j < arr2.length; j++) {
+                if (arr1[i] == arr2[j]) {
+                    newArr.push(arr2[j]);
+                    arr2.splice(j, 1);
+                    break;
+                }
+            }
+        }
+        document.write("Có " + newArr.length + " Kí Tự Chung Là " + newArr.join(" "));
+    }
+
+    check(text1, text2);
+
+
+</script>
+</body>
+</html>

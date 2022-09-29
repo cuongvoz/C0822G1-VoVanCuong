@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let nhap;
+    let giaTien;
+    let soLuong;
+    let tongTien = 0;
+    do {
+        nhap = +prompt("1.Cafe\n" +
+            "2.Cam Vắt\n" +
+            "3.Nước Ép Cà Rốt\n" +
+            "4.Nước Ép Cà Chua\n" +
+            "5.Nước Lọc\n" +
+            "6.Nước Dừa\n" +
+            "7.Thoát Gọi Món");
+        switch (nhap) {
+            case 1:
+                giaTien = 10000;
+                soLuong = +prompt("Cà Phê Có Giá Là " + giaTien + " VNĐ Hãy Nhập Số Lượng Muốn Gọi");
+                tongTien += giaTien * soLuong;
+                break;
+            case 2:
+                giaTien = 15000;
+                soLuong = +prompt("Cam Vắt Có Giá Là " + giaTien + " VNĐ Hãy Nhập Số Lượng Muốn Gọi");
+                tongTien += giaTien * soLuong;
+                break;
+            case 3:
+                giaTien = 17000;
+                soLuong = +prompt("Nước Ép Cà Rốt Có Giá Là " + giaTien + " VNĐ Hãy Nhập Số Lượng Muốn Gọi");
+                tongTien += giaTien * soLuong;
+                break;
+            case 4:
+                giaTien = 13000;
+                soLuong = +prompt("Nước Ép Cà Chua Có Giá Là " + giaTien + " VNĐ Hãy Nhập Số Lượng Muốn Gọi");
+                tongTien += giaTien * soLuong;
+                break;
+            case 5:
+                giaTien = 5000;
+                soLuong = +prompt("Nước Lọc Có Giá Là " + giaTien + " VNĐ Hãy Nhập Số Lượng Muốn Gọi");
+                tongTien += giaTien * soLuong;
+                break;
+            case 6:
+                giaTien = 18000;
+                soLuong = +prompt("Nước Dừa Có Giá Là " + giaTien + " VNĐ Hãy Nhập Số Lượng Muốn Gọi");
+                tongTien += giaTien * soLuong;
+                break;
+            case 7:
+                if (tongTien <= 0) {
+                    alert("Bạn Chưa Chọn Món Gì Cả");
+                    break;
+                } else {
+                    alert("Hóa Đơn Thanh Toán Của Bạn Hết " + tongTien + " VNĐ");
+                    break;
+                }
+            default:
+                alert("Hãy Nhập Lại");
+        }
+    } while (nhap !== 7);
+</script>
+</html>

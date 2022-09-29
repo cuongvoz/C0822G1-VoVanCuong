@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhapLuong = +prompt("Nhập Số Lương Của Bạn");
+    if (nhapLuong < 5000000) {
+        alert("Thuế Thu Nhập Của Bạn Theo Tháng Là : " + nhapLuong * 5/100 + " vnđ");
+    } else if (nhapLuong >= 5000000 && nhapLuong < 10000000) {
+        alert("Thuế Thu Nhập Của Bạn Theo Tháng Là : " + nhapLuong * 10/100 + " vnđ");
+    } else if (nhapLuong >= 10000000 && nhapLuong < 18000000) {
+        alert("Thuế Thu Nhập Của Bạn Theo Tháng Là : " + nhapLuong * 15/100 + " vnđ");
+    } else if (nhapLuong >= 18000000 && nhapLuong < 32000000) {
+        alert("Thuế Thu Nhập Của Bạn Theo Tháng Là : " + nhapLuong * 20/100 + " vnđ");
+    }else if (nhapLuong >= 32000000 && nhapLuong < 52000000) {
+        alert("Thuế Thu Nhập Của Bạn Theo Tháng Là : " + nhapLuong * 25/100 + " vnđ");
+    }else if (nhapLuong >= 52000000 && nhapLuong < 80000000) {
+        alert("Thuế Thu Nhập Của Bạn Theo Tháng Là : " + nhapLuong * 30/100 + " vnđ");
+    } else {
+        alert("Thuế Thu Nhập Của Bạn Theo Tháng Là : " + nhapLuong * 35/100 + " vnđ");
+    }
+
+</script>
+</body>
+</html>

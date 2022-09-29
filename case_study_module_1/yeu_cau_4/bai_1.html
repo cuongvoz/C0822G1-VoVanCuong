@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt("Nhập Chuỗi Kí Tự");
+    function fixString(strings) {
+      let arr = strings.toLowerCase().split(" ");
+      let newStr = "";
+      let index;
+      let max = arr[0]
+      for (let i = 0; i < arr.length; i++) {
+          if (arr[i] != "") {
+              let first = arr[i].substr(0,1);
+              let result = first.toUpperCase()+ arr[i].substr(1);
+              newStr += result + " ";
+              if (max.length < arr[i].length) {
+                  max = arr[i];
+                  index = i;
+              }
+          }
+      }
+      alert(newStr +"\n" + " Và Từ Dài Nhất Là :\n " + max);
+    }
+    fixString(string);
+</script>
+</body>
+</html>
